@@ -1,0 +1,33 @@
+{
+  "name": "testing_nodejs_with_mocha__ADVANCED",
+  "version": "0.1.0",
+  "author": "Michael Lilley",
+  "description": "Testing NodeJS with Mocha",
+  "keywords": [
+    "testing",
+    "mocha",
+    "chai",
+    "sinon"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mlilley/testing_nodejs_with_mocha.git"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon": "*",
+    "blanket": "~1.1.6"
+  },
+  "licence": "MIT",
+  "readme": "README.md",
+  "scripts": {
+    "test": "make test"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "/lib/",
+      "data-cover-never": "node_modules"
+    }
+  }
+}
