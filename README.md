@@ -1,4 +1,4 @@
-# Testing NodeJS with Mocha, Chai, Sinon, and Blanket
+## Testing NodeJS with Mocha, Chai, Sinon, Node-jscoverage and Blanket.
 
 ###### By Diraj Potlapally (dirajkumar@gmail.com)
 ###### Tuesday, 05 August 2014
