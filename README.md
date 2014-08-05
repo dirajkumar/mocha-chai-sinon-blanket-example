@@ -21,7 +21,7 @@ $ npm install
 
 3. Generate coverage report
 ```
-$ mocha -r blanket -R html-cov -> coverage.html
+$ mocha -r blanket -R html-cov > coverage.html
 ```
 (report output to coverage.html)
 
