@@ -1,17 +1,18 @@
 {
-  "name": "testing_nodejs_with_mocha__ADVANCED",
+  "name": "Testing Mocha Chai Sinon and Blanket",
   "version": "0.1.0",
-  "author": "Michael Lilley",
-  "description": "Testing NodeJS with Mocha",
+  "author": "Diraj Potlapally",
+  "description": "Testing Mocha Chai Sinon and Blanket",
   "keywords": [
     "testing",
     "mocha",
     "chai",
-    "sinon"
+    "sinon",
+    "blanket"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mlilley/testing_nodejs_with_mocha.git"
+    "url": "https://github.com/dirajkumar/mocha-chai-sinon-blanket-example"
   },
   "devDependencies": {
     "mocha": "*",
@@ -19,11 +20,7 @@
     "sinon": "*",
     "blanket": "~1.1.6"
   },
-  "licence": "MIT",
   "readme": "README.md",
-  "scripts": {
-    "test": "make test"
-  },
   "config": {
     "blanket": {
       "pattern": "/lib/",

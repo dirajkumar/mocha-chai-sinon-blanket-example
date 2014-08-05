@@ -24,6 +24,3 @@ $ npm install
 $ mocha -r blanket -R html-cov > coverage.html
 ```
 (report output to coverage.html)
-
-## License
-MIT
