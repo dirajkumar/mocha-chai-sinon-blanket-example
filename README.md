@@ -1,9 +1,9 @@
-## Testing NodeJS with Mocha, Chai, Sinon, Node-jscoverage and Blanket.
+###Testing NodeJS with Mocha, Chai, Sinon, Node-jscoverage and Blanket.
 
 ###### By Diraj Potlapally (dirajkumar@gmail.com)
 ###### Tuesday, 05 August 2014
 
-###This project provides boilerplate for supporting test coverage reporting.
+#####This project provides boilerplate for supporting test coverage reporting.
 
 1. Install JSCoverage binary
     ```
