@@ -1,11 +1,9 @@
-# Testing NodeJS with Mocha, Should, Sinon, and JSCoverage
+# Testing NodeJS with Mocha, Chai, Sinon, and Blanket
 
-###### By Michael Lilley (michael.lilley@gmail.com) for Melbourne NodeJS Meetup Group 
-###### Wednesday, 28 August 2013
+###### By Diraj Potlapally (dirajkumar@gmail.com)
+###### Tuesday, 05 August 2014
 
-## Advanced Project
-
-The advanced project provides boilerplate for supporting test coverage reporting.
+###This project provides boilerplate for supporting test coverage reporting.
 
 1. Install JSCoverage binary
 ```
@@ -15,15 +13,15 @@ $ ./configure && make
 $ sudo make install
 ```
 
-2. Install dependencies (mocha, should, and sinon)
+2. Install dependencies (mocha, chai, and sinon)
 ```
-$ cd /path/to/advanced_project/
+$ cd /path/to/project/
 $ npm install
 ```
 
 3. Generate coverage report
 ```
-$ make test-cov
+$ mocha -r blanket -R html-cov -> coverage.html
 ```
 (report output to coverage.html)
 
