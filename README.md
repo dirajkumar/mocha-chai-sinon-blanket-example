@@ -23,4 +23,10 @@ $ npm install
 ```
 $ mocha -r blanket -R html-cov > coverage.html
 ```
+
+4. Open report
+```
+$ open coverage.html
+```
+
 (report output to coverage.html)
