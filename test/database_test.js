@@ -6,11 +6,12 @@ describe('Database Connection Tests using Spies', function() {
     var db;
     var callback;
     beforeEach(function(){
-        db = new Database();
+        db = new Database('asdasd', 'sfsfsaf');
         callback = sinon.spy();
     });
     it('Sucessfull Connection', function() {
         db.on('onSuccess', callback);
+        //callback = sinon.spy(db, 'on');
         db.init('diraj','pass','google.com');
         expect(callback.calledOnce).to.be.ok;
         expect(callback.getCall(0).args[0]).to.equal('Connection Success');
@@ -47,6 +48,36 @@ describe('Database Connection Tests using Stubs', function() {
         db.init('','','google.com');
         expect(callback.calledOnce).to.be.ok;
         expect(callback.getCall(0).args[0]).to.equal('Connection Failed from a Stub');
+    });
+});
+
+describe('Database Test Set Username', function() {
+    var db;
+    var callback;
+    beforeEach(function(){
+        db = new Database();
+        callback = sinon.spy(db, 'onSetUsername');
+    });
+    it('setUsername', function() {
+        db.setUsername('diraj');
+        expect(callback.calledOnce).to.be.ok;
+        //expect(callback.getCall(0).args[0]).to.equal('Connection Success from a Stub');
+    });
+});
+
+describe('Database On Test', function() {
+    var db;
+    var callback;
+    beforeEach(function(){
+        db = new Database();
+        callback = sinon.spy(db, 'onSetUsername');
+    });
+    it('setUsername', function() {
+        db.setUsername('diraj');
+        var onCount = db.emit('displayUsername');
+        console.log('On count=='+onCount);
+        expect(callback.calledOnce).to.be.ok;
+        //expect(callback.getCall(0).args[0]).to.equal('Connection Success from a Stub');
     });
 });
 

@@ -18,12 +18,12 @@
     "mocha": "*",
     "chai": "*",
     "sinon": "*",
-    "blanket": "~1.1.6"
+    "blanket": "*"
   },
   "readme": "README.md",
   "config": {
     "blanket": {
-      "pattern": "/lib/",
+      "pattern": "lib",
       "data-cover-never": "node_modules"
     }
   }
