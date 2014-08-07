@@ -1,5 +1,7 @@
 var sinon = require('sinon'),
     expect = require('chai').expect,
+    assert = require('chai').assert,
+    should = require('chai').should(),
     Database = require('../lib/database');
 
 describe('Database Connection Tests using Spies', function() {
@@ -11,7 +13,6 @@ describe('Database Connection Tests using Spies', function() {
     });
     it('Sucessfull Connection', function() {
         db.on('onSuccess', callback);
-        //callback = sinon.spy(db, 'on');
         db.init('diraj','pass','google.com');
         expect(callback.calledOnce).to.be.ok;
         expect(callback.getCall(0).args[0]).to.equal('Connection Success');

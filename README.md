@@ -13,7 +13,7 @@
 
 2. Generate coverage report
     ```
-    $ mocha -r blanket -R html-cov > coverage.html
+    $ make test-blanket
     ```
 
 3. Open report
