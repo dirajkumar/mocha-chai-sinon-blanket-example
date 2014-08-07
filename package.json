@@ -1,6 +1,6 @@
 {
   "name": "mocha-chai-sinon-blanket-example",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Diraj Potlapally",
   "description": "Testing Mocha Chai Sinon and Blanket",
   "keywords": [

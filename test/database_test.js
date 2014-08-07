@@ -8,13 +8,22 @@ describe('Database Connection Tests using Spies', function() {
     var db;
     var callback;
     beforeEach(function(){
-        db = new Database('asdasd', 'sfsfsaf');
+        db = new Database();
         callback = sinon.spy();
     });
     it('Sucessfull Connection', function() {
         db.on('onSuccess', callback);
-        db.init('diraj','pass','google.com');
+        db.init('username','pass123','https://google.com');
+
+        //Using Chai - Expect Assertion
         expect(callback.calledOnce).to.be.ok;
+
+        //Using Chai - Should Assertion
+        callback.calledOnce.should.be.ok;
+
+        //Using Chai - Assert Assertion
+        assert.isTrue(callback.calledOnce, 'The callback function is called sucessfully');
+
         expect(callback.getCall(0).args[0]).to.equal('Connection Success');
     });
     it('Unsucessfull Connection', function() {
@@ -37,7 +46,7 @@ describe('Database Connection Tests using Stubs', function() {
             db.emit('onSuccess', 'Connection Success from a Stub');
         });
         db.on('onSuccess', callback);
-        db.init('diraj','pass','google.com');
+        db.init('username','pass123','https://google.com');
         expect(callback.calledOnce).to.be.ok;
         expect(callback.getCall(0).args[0]).to.equal('Connection Success from a Stub');
     });
@@ -46,7 +55,7 @@ describe('Database Connection Tests using Stubs', function() {
             db.emit('onFailure', 'Connection Failed from a Stub');
         });
         db.on('onFailure', callback);
-        db.init('','','google.com');
+        db.init('','','https://google.com');
         expect(callback.calledOnce).to.be.ok;
         expect(callback.getCall(0).args[0]).to.equal('Connection Failed from a Stub');
     });
@@ -62,7 +71,6 @@ describe('Database Test Set Username', function() {
     it('setUsername', function() {
         db.setUsername('diraj');
         expect(callback.calledOnce).to.be.ok;
-        //expect(callback.getCall(0).args[0]).to.equal('Connection Success from a Stub');
     });
 });
 
@@ -76,9 +84,7 @@ describe('Database On Test', function() {
     it('setUsername', function() {
         db.setUsername('diraj');
         var onCount = db.emit('displayUsername');
-        console.log('On count=='+onCount);
         expect(callback.calledOnce).to.be.ok;
-        //expect(callback.getCall(0).args[0]).to.equal('Connection Success from a Stub');
     });
 });
 
